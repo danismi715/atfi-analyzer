@@ -1,0 +1,74 @@
+/*-----QMainWindow-----*/
+
+QMainWindow::separator
+{
+    width: 0px;
+    height: 0px;
+}
+
+QMainWindow
+{
+    background: #1d2141;
+}
+
+/*-----NavigatePanel-----*/
+
+NavigatePanel
+{
+    background: #2c325c;
+}
+
+QGroupBox
+{
+    background: #2c325c;
+    border: none;
+    border-radius: 5px;
+}
+/*-----QRadioButton-----*/
+
+QRadioButton
+{
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+}
+
+QRadioButton::indicator
+{
+    border: none;
+}
+
+QRadioButton#homeButton
+{
+    padding: 15px;
+    image: url(:/icons/icons8-home-48.png);
+}
+
+QRadioButton#homeButton:checked
+{
+    image: url(:/icons/home_hover.png);
+    border-bottom: 3px solid #3ef3d3;
+}
+
+QRadioButton#homeButton:hover
+{
+    image: url(:/icons/home_hover.png);
+}
+
+QRadioButton#settingsButton
+{
+    padding: 15px;
+    image: url(:/icons/icons8-settings-52.png);
+}
+
+QRadioButton#settingsButton:hover
+{
+    image: url(:/icons/settings_hover.png);
+}
+
+QRadioButton#settingsButton:checked
+{
+    image: url(:/icons/settings_hover.png);
+    border-bottom: 3px solid #3ef3d3;
+}
+

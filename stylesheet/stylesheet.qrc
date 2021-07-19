@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>icons/home_hover.png</file>
+        <file>icons/icons8-file-50.png</file>
+        <file>icons/icons8-home-48.png</file>
+        <file>icons/icons8-settings-52.png</file>
+        <file>icons/settings_hover.png</file>
+    </qresource>
+</RCC>
