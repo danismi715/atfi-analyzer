@@ -2,12 +2,10 @@
 
 ViewBase::ViewBase()
 {
-
 }
 
 ViewBase::~ViewBase()
 {
-
 }
 
 void ViewBase::bind(PresenterBase *presenter)

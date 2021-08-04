@@ -8,7 +8,6 @@ SetupScreenView::SetupScreenView(QWidget *parent) :
 
 SetupScreenView::~SetupScreenView()
 {
-
 }
 
 void SetupScreenView::show()
@@ -18,10 +17,8 @@ void SetupScreenView::show()
 
 void SetupScreenView::update()
 {
-
 }
 
 void SetupScreenView::exit()
 {
-
 }

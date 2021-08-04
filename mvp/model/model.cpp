@@ -56,13 +56,11 @@ void Model::extractResourceFromFile(ChannelColumn column)
     QString line;
 
     while (!_file->atEnd()) {
-
         _accessFileMux->lock();
         line = _file->readLine();
         _accessFileMux->unlock();
 
         columnResource = line.split('\t');
-
 
         double timeinsec = columnResource[HTIME_COLUMN].toInt() * 3600
                          + columnResource[MTIME_COLUMN].toInt() * 60

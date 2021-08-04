@@ -64,7 +64,6 @@ void setupNavigatePanel(NavigatePanel *pnavigatePanel)
 
 void setupAppStyle(QApplication *papp, const QString stylePath)
 {
-
     QFile file(stylePath);
     file.open(QFile::ReadOnly | QFile::Text);
 

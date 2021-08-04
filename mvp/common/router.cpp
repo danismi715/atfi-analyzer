@@ -3,7 +3,6 @@
 
 router::Router::Router()
 {
-
 }
 
 router::Router &router::Router::getInstance()

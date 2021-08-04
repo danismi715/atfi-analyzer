@@ -4,7 +4,6 @@
 
 MVPCanvas::MVPCanvas(QWidget *parent) : MVPCanvas(640, 480, parent)
 {
-
 }
 
 MVPCanvas::MVPCanvas(int width, int height, QWidget *parent)

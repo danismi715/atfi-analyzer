@@ -9,7 +9,6 @@ PresenterBase::PresenterBase(Model *model, ViewBase *view)
     : _model(model)
     , _view(view)
 {
-
 }
 
 void PresenterBase::bindModel(Model *model)
@@ -54,7 +53,6 @@ ViewBase* PresenterBase::getView()
 
 void PresenterBase::exec()
 {
-
 }
 
 void PresenterBase::exit()

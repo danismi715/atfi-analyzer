@@ -2,7 +2,6 @@
 
 CustomChart::CustomChart(QWidget *parent) : CustomChart(parent, "", "", "")
 {
-
 }
 
 CustomChart::CustomChart(QWidget *parent, QString &&str, QString &&xlabel, QString &&ylabel)

@@ -6,7 +6,6 @@
 NavigatePanel::NavigatePanel(QWidget *parent)
     : NavigatePanel(NavigatePanel::PanelOrientation ::Vertical, parent)
 {
-
 }
 
 NavigatePanel::NavigatePanel(NavigatePanel::PanelOrientation orientation, QWidget *parent)

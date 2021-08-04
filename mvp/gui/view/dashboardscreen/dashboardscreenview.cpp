@@ -86,7 +86,6 @@ DashboardScreenView::DashboardScreenView(QWidget *parent) :
 
 DashboardScreenView::~DashboardScreenView()
 {
-
 }
 
 void DashboardScreenView::show()
@@ -96,12 +95,10 @@ void DashboardScreenView::show()
 
 void DashboardScreenView::update()
 {
-
 }
 
 void DashboardScreenView::exit()
 {
-
 }
 
 void DashboardScreenView::setECGSeries(QVector<double>&& x, QVector<double>&& y)
