@@ -36,7 +36,7 @@ private:
     QVector<double> _freq;
 
     QTimer *_timer;
-    int _startPosition;
+    int _start_position;
 };
 
 #endif // MAINSCREENPRESENTER_H

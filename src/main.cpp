@@ -9,7 +9,6 @@
 #include "mvp/gui/presenter/dashboardscreen/dashboardscreenpresenter.h"
 #include "mvp/gui/view/setupscreen/setupscreenview.h"
 #include "mvp/gui/presenter/setupscreen/setupscreenpresenter.h"
-#include <fftw3.h>
 
 void setupNavigatePanel(NavigatePanel *pnavigatePanel);
 void setupAppStyle(QApplication *papp, const QString stylePath);
@@ -20,29 +19,29 @@ int main(int argc, char *argv[])
 
     setupAppStyle(&app, ":/style.qss");
 
-    NavigatePanel *navigatePanel = new NavigatePanel(NavigatePanel::Horizontal, nullptr);
-    MVPCanvas *mvpcanvas = new MVPCanvas(640, 480);
+    NavigatePanel *navigate_panel = new NavigatePanel(NavigatePanel::Horizontal, nullptr);
+    MVPCanvas *mvp_canvas = new MVPCanvas(640, 480);
 
-    mvpcanvas->addNavigatePanel(Qt::DockWidgetArea::BottomDockWidgetArea, navigatePanel);
+    mvp_canvas->addNavigatePanel(Qt::DockWidgetArea::BottomDockWidgetArea, navigate_panel);
 
     // Create Model
     Model *model = new Model;
 
     // Create Main Screen
-    DashboardScreenPresenter *dashboardScreenPresenter = new DashboardScreenPresenter;
-    DashboardScreenView *dashboardScreenView = new DashboardScreenView;
+    DashboardScreenPresenter *dashboard_screen_presenter = new DashboardScreenPresenter;
+    DashboardScreenView *dashboard_screen_view = new DashboardScreenView;
 
     // Create Setup Screen
-    SetupScreenPresenter *setupScreenPresenter = new SetupScreenPresenter;
-    SetupScreenView *setupScreenView = new SetupScreenView;
+    SetupScreenPresenter *setup_screen_presenter = new SetupScreenPresenter;
+    SetupScreenView *setup_screen_view = new SetupScreenView;
 
-    router::Router::getInstance().setCanvas(mvpcanvas);
+    router::Router::getInstance().setCanvas(mvp_canvas);
 
-    router::Router::getInstance().makeScreenRoute("DashboardScreen", dashboardScreenPresenter, dashboardScreenView, model);
-    router::Router::getInstance().makeScreenRoute("SetupScreen", setupScreenPresenter, setupScreenView, model);
+    router::Router::getInstance().makeScreenRoute("DashboardScreen", dashboard_screen_presenter, dashboard_screen_view, model);
+    router::Router::getInstance().makeScreenRoute("SetupScreen", setup_screen_presenter, setup_screen_view, model);
     router::Router::getInstance().setDefaultScreen("DashboardScreen");
 
-    setupNavigatePanel(navigatePanel);
+    setupNavigatePanel(navigate_panel);
 
     router::Router::getInstance().exec();
 
@@ -54,6 +53,7 @@ void setupNavigatePanel(NavigatePanel *pnavigatePanel)
     pnavigatePanel->setHomeLinkAction([]() {
         router::Router::getInstance().makeRedirection("DashboardScreen");
     });
+
 
     pnavigatePanel->setSettingsLinkAction([]() {
         router::Router::getInstance().makeRedirection("SetupScreen");

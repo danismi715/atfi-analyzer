@@ -28,25 +28,25 @@ void MVPCanvas::setWindowHeight(int height)
 
 void MVPCanvas::addNavigatePanel(Qt::DockWidgetArea area, QWidget *widget)
 {
-    _navigatePanel = new QDockWidget(this);
-    _navigatePanel->setTitleBarWidget(new QWidget()); //Delete title
-    _navigatePanel->setWindowFlag(Qt::WindowType::FramelessWindowHint);
-    _navigatePanel->setWidget(widget);
-    _navigatePanel->setFeatures(QDockWidget::DockWidgetFeature::NoDockWidgetFeatures);
+    _navigate_panel = new QDockWidget(this);
+    _navigate_panel->setTitleBarWidget(new QWidget()); //Delete title
+    _navigate_panel->setWindowFlag(Qt::WindowType::FramelessWindowHint);
+    _navigate_panel->setWidget(widget);
+    _navigate_panel->setFeatures(QDockWidget::DockWidgetFeature::NoDockWidgetFeatures);
 
     if (area == Qt::DockWidgetArea::RightDockWidgetArea || area == Qt::DockWidgetArea::LeftDockWidgetArea) {
-        _navigatePanel->setFixedWidth(widget->width());
+        _navigate_panel->setFixedWidth(widget->width());
     }
     if (area == Qt::DockWidgetArea::TopDockWidgetArea || area == Qt::DockWidgetArea::BottomDockWidgetArea) {
-        _navigatePanel->setFixedHeight(widget->height());
+        _navigate_panel->setFixedHeight(widget->height());
     }
 
-    addDockWidget(area, _navigatePanel);
+    addDockWidget(area, _navigate_panel);
 }
 
 QWidget *MVPCanvas::getNavigatePanel()
 {
-    return _navigatePanel;
+    return _navigate_panel;
 }
 
 int MVPCanvas::addScreen(QWidget *screen)

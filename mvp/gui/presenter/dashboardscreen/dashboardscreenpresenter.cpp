@@ -10,7 +10,7 @@
 
 
 DashboardScreenPresenter::DashboardScreenPresenter()
-    : _startPosition(0)
+    : _start_position(0)
 {
     _timer = new QTimer(this);
     _timer->setInterval(500);
@@ -31,8 +31,8 @@ void DashboardScreenPresenter::postbinding()
 
 void DashboardScreenPresenter::setDataChart()
 {
-    _y = _model->getY(_startPosition, 2048);
-    _x = _model->getX(_startPosition, 2048);
+    _y = _model->getY(_start_position, 2048);
+    _x = _model->getX(_start_position, 2048);
 
     dynamic_cast<DashboardScreenView*>(_view)->setECGSeries(std::move(_x), std::move(_y));
 
@@ -84,8 +84,8 @@ void DashboardScreenPresenter::fft()
 
 void DashboardScreenPresenter::setParamEventHandler(int value)
 {
-    if ( ((_startPosition + value) <= _model->getSize()) && ((_startPosition + value) >= 0)) {
-        _startPosition = value;
+    if ( ((_start_position + value) <= _model->getSize()) && ((_start_position + value) >= 0)) {
+        _start_position = value;
         setDataChart();
     }
 }
@@ -94,8 +94,8 @@ void DashboardScreenPresenter::mouseWheelEventHandler(QWheelEvent *event)
 {
     int offset = event->angleDelta().y() / 8;
 
-    if ( ((_startPosition + offset + 2048) < _model->getSize()) && ((_startPosition + offset) >= 0)) {
-        _startPosition += offset;
+    if ( ((_start_position + offset + 2048) < _model->getSize()) && ((_start_position + offset) >= 0)) {
+        _start_position += offset;
         setDataChart();
     }
 }

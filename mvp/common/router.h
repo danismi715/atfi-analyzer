@@ -36,12 +36,12 @@ private:
     Router();
 
     std::map<QString, PresenterBase*> _routes;
-    QString _currentScreen;
-    Model *_currentModel;
-    PresenterBase *_currentPresenter;
-    ViewBase *_currentView;
+    QString _current_screen;
+    Model *_current_model;
+    PresenterBase *_current_presenter;
+    ViewBase *_current_view;
     MVPCanvas *_canvas;
-    QString _defaultScreen;
+    QString _default_screen;
 };
 
 }

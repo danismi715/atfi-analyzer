@@ -23,7 +23,7 @@ public:
     void showMaximized();
 private:
     QStackedWidget _stackscreen;
-    QDockWidget *_navigatePanel;
+    QDockWidget *_navigate_panel;
     int _width;
     int _height;
 };

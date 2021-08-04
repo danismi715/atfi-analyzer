@@ -45,9 +45,9 @@ private:
     static const int WIDGET_SIZE = 60;
 
     PanelOrientation _orientation;
-    std::array<QRadioButton*, LinkNumber> _navigateBtnList;
-    std::function<void(void)> _homeButtonAction;
-    std::function<void(void)> _settingsButtonAction;
+    std::array<QRadioButton*, LinkNumber> _navigate_btn_list;
+    std::function<void(void)> _home_button_action;
+    std::function<void(void)> _settings_button_action;
 };
 
 #endif // NAVIGATEPANEL_H
