@@ -2,7 +2,6 @@
 
 PresenterBase::PresenterBase()
 {
-
 }
 
 PresenterBase::PresenterBase(Model *model, ViewBase *view)
